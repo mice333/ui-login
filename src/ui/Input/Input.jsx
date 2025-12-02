@@ -1,11 +1,11 @@
 import React from "react";
 import cl from "./Input.module.css";
 
-export default function Input({ children, hint }) {
+export default function Input({ children, hint, type }) {
   return (
-    <>
+    <div>
       <label>{hint}</label> <br />
-      <input className={cl.input} />
-    </>
+      <input type={type} className={cl.input} />
+    </div>
   );
 }
