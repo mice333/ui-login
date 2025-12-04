@@ -2,15 +2,20 @@ import React, { use, useState } from "react";
 import Input from "../../ui/Input/Input";
 import Button from "../../ui/Button/Button";
 import cl from "./LoginForm.module.css";
+import Message from "../Message/Message";
 
 export default function LoginForm() {
   const [user, setUser] = useState({
     username: "",
     password: "",
   });
+  const [error, setError] = useState(false);
 
   function checkingLogin() {
     console.log(user);
+    if (user.username != user.password) {
+      setError(true);
+    }
   }
 
   return (
@@ -42,6 +47,7 @@ export default function LoginForm() {
         <div>
           <Button onClick={checkingLogin}>Войти</Button>
         </div>
+        {error && <Message />}
       </div>
     </div>
   );

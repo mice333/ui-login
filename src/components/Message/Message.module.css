@@ -1,0 +1,25 @@
+.message {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid green;
+  border-radius: 10px;
+  width: 250px;
+  padding: 18px 10px;
+  background: lightgreen;
+  animation: swipe 0.2s;
+  overflow: hidden;
+}
+
+@keyframes swipe {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

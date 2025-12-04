@@ -6,6 +6,7 @@
   border-radius: 45px;
   margin: 300px auto;
   box-shadow: 0 4px 2px 0 #00000040;
+  animation: popup 0.34s;
 }
 
 .left {
@@ -45,4 +46,14 @@
   color: white;
   text-align: center;
   font-size: 18px;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(2.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
